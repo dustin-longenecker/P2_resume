@@ -2,59 +2,53 @@
 /**
  * bio info
  */
- var bio = {
-    "name": "DLL",
-    "role": "Web Developer",
-    "contacts": {
-      "mobile": "xxx-xxx-xxxx",
-      "email": "email.com",
-      "github": "https://github.com/dustin-longenecker",
-      "twitter": "twitter",
-      "location": "Denver, CO"
-    },
-    "welcomeMessage": "This is my welcome message!",
-    "skills": ["HTML&CSS", "JavaScript", "JQuery", "JSON", "Bootstrap"],
-    "biopic": "images/fry.jpg"
-    
-  }
+
   //header display
 
 
 //display bio
 function displayBio() {
+  var bio = {
+     "name": "DLL",
+     "role": "Web Developer",
+     "contacts": {
+       "mobile": "xxx-xxx-xxxx",
+       "email": "email.com",
+       "github": "https://github.com/dustin-longenecker",
+       "twitter": "twitter",
+       "location": "Denver, CO"
+     },
+     "welcomeMessage": "This is my welcome message!",
+     "skills": ["HTML&CSS", "JavaScript", "JQuery", "JSON", "Bootstrap"],
+     "biopic": "images/fry.jpg"
+
+   }
 
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
-  for (contact in bio.contacts) {
+  //for (contact in bio.contacts) {
     //formatting contact info from helper.js
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+    var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    var formattedBioPic = HTMLbioPic.replace("%data%", bio.contacts.biopic);
+    var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 
     //append contact info
-    $("#topContacts").append(formattedMobile);
-    $("#topContacts").append(formattedEmail);
-    $("#topContacts").append(formattedGithub);
-    $("#topContacts").append(formattedLocation);
-    $("#topContacts").append(formattedBioPic);
+    $("#topContacts, #footerContacts").append(formattedMobile);
+    $("#topContacts, #footerContacts").append(formattedEmail);
+    $("#topContacts, #footerContacts").append(formattedGithub);
+    $("#topContacts, #footerContacts").append(formattedTwitter);
+    $("#topContacts, #footerContacts").append(formattedLocation);
+    $("#header").append(formattedBioPic);
 
-    //inName
-    function inName(name) {
-
-      name = name.trim().split(" ");
-      console.log(name);
-      name[1] = name[1].toUpperCase();
-      name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-
-      return name[0] + " " + name[1];
-    }
+  
       //append internationalize button
       $('#main').append(internationalizeButton);
-  }
+  //}
   $("#skillsdiv").append(HTMLskillsStart);
   for (var i = 0, l = bio.skills.length; i < l; i++) {
     var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
@@ -77,18 +71,19 @@ displayBio();
 /**
  *Work Information
  */
-var work = {
-    //jobs array within work Object
-    "jobs": [{
-      "employer": "Udacity",
-      "title": "Entry-Level Front-End Web Developer",
-      "location": "denver, co",
-      "dates": "Current",
-      "description": "Actively seeking employment in related technology field!"
-    }]
-  }
+
   //Work Display
 function displayWork() {
+  var work = {
+      //jobs array within work Object
+      "jobs": [{
+        "employer": "Udacity",
+        "title": "Entry-Level Front-End Web Developer",
+        "location": "denver, co",
+        "dates": "Current",
+        "description": "Actively seeking employment in related technology field!"
+      }]
+    }
   for (job in work.jobs) {
     //create new div for work exp
     $("#workExperience").append(HTMLworkStart);
@@ -126,21 +121,22 @@ console.log(locationizer(work));
 /**
  *project Information
  */
-var projects = {
-    "projects": [{
-      "title": "Portfolio",
-      "dates": "January 2016",
-      "description": "Portfolio Showcasing Previous Work",
-      "images": "none"
-    }, {
-      "title": "Online Resume",
-      "dates": "February 2016",
-      "description": "Online Resume",
-      "images": "none"
-    }]
-  }
+
   //project display
 projects.display = function() {
+  var projects = {
+      "projects": [{
+        "title": "Portfolio",
+        "dates": "January 2016",
+        "description": "Portfolio Showcasing Previous Work",
+        "images": "images/fry.jpg"
+      }, {
+        "title": "Online Resume",
+        "dates": "February 2016",
+        "description": "Online Resume",
+        "images": "images/fry.jpg"
+      }]
+    }
     for (i in projects.projects) {
       //create new div for work exp
       $("#projects").append(HTMLprojectStart);
@@ -168,37 +164,38 @@ projects.display();
  *schools information
  */
 
- var education = {
-   "schools": [{
-     "name": "Metropolitan State University of Denver",
-     "degree": "Bachelor",
-     "dates": "In Progress",
-     "location": "Denver, Colorado",
-     "major": "Computer Science",
-     "url": "www.msudenver.edu"
-   }, {
-     "name": "Front-End Web Development NanoDegree",
-     "degree": "Udacity",
-     "dates": "In Progress",
-     "location": "Denver, Colorado",
-     "major": "Web Development"
-   }, {
-     "name": "iOS Application Development NanoDegree",
-     "degree": "Udacity",
-     "dates": "In Progress",
-     "location": "Denver, Colorado",
-     "major": "Web Development"
-   }],
-   "online": [{
-     "title": "Introduction to HTML & CSS",
-     "school": "Udacity",
-     "dates": "January 2016",
-     "url": "https://udacity.com/u/dustinlongenecker"
-   }]
- }
+
 
    //project display
  education.display = function() {
+   var education = {
+     "schools": [{
+       "name": "Metropolitan State University of Denver",
+       "degree": "Bachelor",
+       "dates": "In Progress",
+       "location": "Denver, Colorado",
+       "major": "Computer Science",
+       "url": "www.msudenver.edu"
+     }, {
+       "name": "Front-End Web Development NanoDegree",
+       "degree": "Udacity",
+       "dates": "In Progress",
+       "location": "Denver, Colorado",
+       "major": "Web Development"
+     }, {
+       "name": "iOS Application Development NanoDegree",
+       "degree": "Udacity",
+       "dates": "In Progress",
+       "location": "Denver, Colorado",
+       "major": "Web Development"
+     }],
+     "online": [{
+       "title": "Introduction to HTML & CSS",
+       "school": "Udacity",
+       "dates": "January 2016",
+       "url": "https://udacity.com/u/dustinlongenecker"
+     }]
+   }
      for (s in education.schools) {
        //create new div for work exp
        $("#education").append(HTMLschoolStart);
