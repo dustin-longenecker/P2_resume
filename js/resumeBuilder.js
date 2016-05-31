@@ -7,7 +7,7 @@
 
 //display bio
 var bio = {
-    "name": "DLL",
+    "name": "Dustin Longenecker",
     "role": "Web Developer",
     "contacts": {
         "mobile": "303-518-3555",
@@ -16,8 +16,8 @@ var bio = {
         "twitter": "twitter",
         "location": "Denver, CO"
     },
-    "welcomeMessage": "Enthusiastic developer interested in aquiring further knowledge, practice, and creativity with web technologies!",
-    "skills": ["HTML&CSS", "JavaScript", "JQuery", "JSON", "AJAX", "Bootstrap", "RubyOnRails", "Wordpress", "PHP", "Sinatra", "ActiveRecord", "SQL/PostgreSQL/mySQL"],
+    "welcomeMessage": "Enthusiastic developer interested in obtaining further knowledge, practice, and creativity with web technologies!",
+    "skills": ["HTML&CSS", "JavaScript", "JQuery", "JSON", "AJAX", "Bootstrap", "RubyOnRails", "Wordpress", "PHP", "Sinatra", "ActiveRecord", "SQL/PostgreSQL/mySQL", "C++","Java","SWIFT"],
     "biopic": "images/fry.jpg",
     "display": function() {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
