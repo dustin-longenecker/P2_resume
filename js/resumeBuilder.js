@@ -102,27 +102,27 @@ var projects = {
     "projects": [{
         "title": "Portfolio",
         "dates": "January 2016",
-        "description": "Portfolio Showcasing Previous Work",
+        "description": "Portfolio built using HTML, CSS, BootStrap.",
         "images": ["images/fry.jpg"]
     }, {
         "title": "Online Resume",
         "dates": "February 2016",
-        "description": "Online Resume",
+        "description": "Online Resume built using HTML, CSS, Basic JavaScript, JSON, JQuery",
         "images": ["images/fry.jpg", "images/fry.jpg"]
     }, {
         "title": "Arcade Game",
         "dates": "June 2016",
-        "description": "Replica Frogger-Like game created using HTML-CSS, HTML5, XML, JavaScript.",
+        "description": "Frogger-like arcade game built using HTML, CSS, HTML5, XML, OOP JavaScript.",
         "images": ["images/fry.jpg", "images/fry.jpg"]
     }, {
         "title": "Web Optimization",
         "dates": "June 2016",
-        "description": "Online Resume",
+        "description": "Optimized website using JavaScript testing scripts.",
         "images": ["images/fry.jpg", "images/fry.jpg"]
     }, {
-        "title": "Online Resume",
+        "title": "Ma",
         "dates": "February 2016",
-        "description": "Online Resume",
+        "description": "built using AJAX, JavaScript.",
         "images": ["images/fry.jpg", "images/fry.jpg"]
     }],
     "display": function() {
